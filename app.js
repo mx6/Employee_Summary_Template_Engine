@@ -9,7 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 // const {render, renderManager} = require("./htmlRenderer");
-const Employee = require("./htmlRenderer.js");
+const render = require("./htmlRenderer.js");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
@@ -19,6 +19,7 @@ const idArray = [];
 function appMenu() {
 
     function createManager() {
+       
         inquirer.prompt(
             [
                 // MANAGER
@@ -48,9 +49,12 @@ function appMenu() {
                     message: "please give manager office number:",
                     name: "managerOfficeNumber"
                 },
+               
             ]).then(answers => {
-
+                const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+                teamMembers.push(manager)
                 createTeam();
+                // console.log(managerName);
             });
     }
 
@@ -73,6 +77,7 @@ function appMenu() {
                     addEngineer();
                     break;
                     case "Intern":
+                    addIntern();
                     break;
                     default:
                     buildTeam();
@@ -110,7 +115,8 @@ function appMenu() {
             name: "githubId"
         },
         ]).then(answers => {
-
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubId)
+            teamMembers.push(engineer)
             createTeam();
 
         });
@@ -145,14 +151,20 @@ function appMenu() {
                 name: "internSchool"
             },
         ]).then(answers => {
-
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+            teamMembers.push(intern)
             createTeam();
 
         });
     }
 
-    function buildTeam() {
+     function buildTeam() {
+         console.log(teamMembers);
+        if(!fs.existsSync(OUTPUT_DIR)){
+            fs.mkdirSync(OUTPUT_DIR);
+        }
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        
     }
 
     createManager();
@@ -169,9 +181,9 @@ appMenu();
     // const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
     
     
-    console.log(manager);
-    console.log(engineer);
-    console.log(intern);
+    // console.log(createManager);
+    // console.log(engineer);
+    // console.log(intern);
 
 
     // const managerHtml = renderManager(manager);
