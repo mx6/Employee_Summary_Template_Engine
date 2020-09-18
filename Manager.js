@@ -12,4 +12,5 @@ class Manager extends Employee { // manager has employee properties & methods
         return this.officeNumber;
     }
 }
+
 module.exports = Manager;
