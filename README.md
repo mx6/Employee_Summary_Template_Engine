@@ -6,9 +6,11 @@
 
 Setting up repo for Week 10 Boot Camp Homework, due 22 SEP.  Read Me files are the best, aren't they?  
 
-181821LSEP2020
+181545LSEP2020
 
 Uploaded final versions of files; uploaded demo video to YouTube.
+
+181821LSEP2020
 
 This project was building an "Employee Summary" website with CLI.  The user types in information about managers, engineers, and/or interns at their company, and it automatically generates the html for a page.
 
@@ -32,4 +34,5 @@ Watch the following to see the Template Engine in action:
 https://youtu.be/uxswlVSCIug
 
 If you like what you see or you have any questions, or just wanna talk about how nutso 2020 is, feel free to drop me a line!
+
 M
