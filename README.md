@@ -9,3 +9,5 @@ Setting up repo for Week 10 Boot Camp Homework, due 22 SEP.  Read Me files are t
 181821LSEP2020
 
 Uploaded final versions of files; uploaded demo video to YouTube.
+
+![screen1]Screen Shots/Emp_Sum_Temp_Eng_01.png
