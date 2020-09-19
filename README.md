@@ -10,4 +10,4 @@ Setting up repo for Week 10 Boot Camp Homework, due 22 SEP.  Read Me files are t
 
 Uploaded final versions of files; uploaded demo video to YouTube.
 
-(Employee_Summary_Template_Engine/Screen Shots/Emp_Sum_Temp_Eng_01.png)
+![image](Employee_Summary_Template_Engine/Screen Shots/Emp_Sum_Temp_Eng_01.png)
